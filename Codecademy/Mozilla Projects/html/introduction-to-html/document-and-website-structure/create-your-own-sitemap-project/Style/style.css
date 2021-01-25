@@ -1,0 +1,44 @@
+html {
+    background-color: black;
+    color: white;
+    font-size: 25px;
+}
+
+header {
+    height: 50px;
+    background-color: navy;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+}
+
+nav {
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0.349);
+    margin: 0;
+    padding: 10;
+}
+header, li {
+    display: inline;
+    text-align: center;
+    flex: 1;
+  }
+
+h1 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 80px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+img {
+    width: 80%; height: auto;
+    align-self: auto;
+}
