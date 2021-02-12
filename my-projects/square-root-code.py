@@ -2,7 +2,8 @@
 """
 Created on Tue Feb  9 20:15:23 2021
 
-@author: Desktop
+@author: Ernesto
+(based off of or inspired by the code written by Eric Grimson)
 
 Find the square root of x
 """
