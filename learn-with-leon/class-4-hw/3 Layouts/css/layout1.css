@@ -1,0 +1,30 @@
+*{
+    box-sizing:border-box;
+}
+header{
+    length:100%;
+    height:100px;
+    background:gold;
+    border: 3px solid black;
+}
+.alpha{
+    width:33.3333%;
+    height:200px;
+    float:left;
+    background:blue;
+    border: 3px solid black;
+}
+.beta{
+    width:50%;
+    height:300px;
+    float:left;
+    background:red;
+    border: 3px solid black;
+}
+footer{
+    length:100%;
+    height:100px;
+    background:gold;
+    clear: both;
+    border: 3px solid black;
+}
