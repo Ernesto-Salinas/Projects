@@ -1,0 +1,18 @@
+Original Gif: https://assets.contentstack.io/v3/assets/blt187521ff0727be24/blt5a79db95e88d2ea5/60ee0e1a496a232835c1ff73/ionia-splashvideo.webm
+
+original element:
+<video autoplay="" loop="" preload="auto" src="https://assets.contentstack.io/v3/assets/blt187521ff0727be24/blt5a79db95e88d2ea5/60ee0e1a496a232835c1ff73/ionia-splashvideo.webm" class="zoom-to-fill" style="width: auto; height: auto; min-height: 88vh; min-width: 100vw; position: absolute; top: 0.138889%; left: 100%; transform: translate(-100%, -0.138889%); z-index: 1;"></video>
+
+
+My version so far:
+<video autoplay muted loop id="">
+			<source src="https://assets.contentstack.io/v3/assets/blt187521ff0727be24/blt5a79db95e88d2ea5/60ee0e1a496a232835c1ff73/ionia-splashvideo.webm" type="video/mp4">
+		</video>
+
+my version 1.1:
+<video autoplay muted loop id="IoniaGif">
+			<source src="https://assets.contentstack.io/v3/assets/blt187521ff0727be24/blt5a79db95e88d2ea5/60ee0e1a496a232835c1ff73/ionia-splashvideo.webm" poster="assets/akali.jpg" type="video/mp4">
+		</video>
+
+Irelia embed code:
+<iframe src="https://giphy.com/embed/nYSXnVvx0GOXEyeesn" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/leagueoflegends-lol-league-of-legends-wild-rift-nYSXnVvx0GOXEyeesn">via GIPHY</a></p>

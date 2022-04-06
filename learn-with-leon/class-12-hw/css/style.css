@@ -1,0 +1,56 @@
+/******************************************
+/* HOT GARBAGE - PLEASE DON'T MIMIC THIS CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body{
+  background: url(../assets/ionia2.gif);
+  background-repeat: no-repeat;
+}
+#IoniaGif {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+h1 {
+  text-align: center;
+  width: 100%;
+}
+img{
+  height: 150px;
+  width: 150px;
+  border: 5px solid black;
+  margin: 0 auto;
+}
+section{
+  margin:50% 0 0 50%;
+}
+ul{
+  display: flex;
+  justify-content: left;
+  width: 100px;
+  height: 200px;
+  border: 0px solid black;
+  list-style: none;
+  padding: 0;
+}
+li{
+  display: flex;
+  width: 150px;
+  height: 150px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
