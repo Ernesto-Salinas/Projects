@@ -1,0 +1,5 @@
+When user clicks on Akali image, change background to Akali gif
+
+If aspect ratio is greater than 3/2, width image is equal 100% of the viewport width, and height is set to auto.
+
+If aspect ratio is less than 3/2, width of image is set to auto and height of image is set to 100% of viewport.

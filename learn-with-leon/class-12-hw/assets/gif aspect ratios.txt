@@ -1,0 +1,7 @@
+aspect ratio template: w/h
+
+
+Akali gif:
+- w: 1000
+- h: 666
+aspect ratio: 3/2

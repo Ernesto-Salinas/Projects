@@ -3,25 +3,31 @@
 /*******************************************/
 
 /* Box Model Hack */
-*{
+/* *{
   box-sizing: border-box;
-}
+} */
 
 /******************************************
 /* LAYOUT
 /*******************************************/
+
+html,body{
+  margin: 0;
+  height: 100%;
+}
 body{
   background: url(../assets/ionia2.gif);
   background-repeat: no-repeat;
+  background-position: center right;
 }
-#IoniaGif {
+/* #IoniaGif {
   position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
-}
+} */
 h1 {
   text-align: center;
   width: 100%;
@@ -33,13 +39,23 @@ img{
   margin: 0 auto;
 }
 section{
-  margin:50% 0 0 50%;
+  /* margin:50% 0 0 50%; */
+  position:absolute;
+  right: 0px;
+  bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+h2{
+  width: 100%;
 }
 ul{
   display: flex;
   justify-content: left;
-  width: 100px;
-  height: 200px;
+  width: auto;
+  height: auto;
+  flex-wrap: wrap;
   border: 0px solid black;
   list-style: none;
   padding: 0;
@@ -53,4 +69,13 @@ li{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-
+@media (max-aspect-ratio: 16/9){
+  body{
+    background-size: auto 100%;
+  }
+}
+@media (min-aspect-ratio: 16/9){
+  body{
+    background-size: 100% auto;
+  }
+}
