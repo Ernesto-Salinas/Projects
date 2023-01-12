@@ -1,7 +1,4 @@
-// Class 18.5 Super Review - JS
+// Class 19 - Arrays
 
-let pizza = 5
-
-pizza +=1
-
-console.log(pizza)
+let newArr = ['NYC','LA','SYD','LDN']
+let zebraArr = ['Zebra',,true,21]
