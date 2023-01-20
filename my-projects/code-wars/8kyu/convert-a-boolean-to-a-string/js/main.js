@@ -1,8 +1,12 @@
 // Instructions
-// Implement a function which convert the given boolean value into its string representation.
 
-// Note: Only valid inputs will be given.
+// Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
 
-function booleanToString(b){
-    return(b.toString())
+function boolToWord( bool ){
+  if(bool==true){
+    console.log(bool)
+    return "Yes"
+  } else {
+    return "No"
   }
+}
