@@ -1,10 +1,11 @@
-// Class 19 - Arrays
+// Class 20 - Arrays
 
-let newArr = ['NYC','LA','SYD','LDN']
-let zebraArr = ['Zebra',,true,21]
+let bestColors = ['green','blue','yellow','black']
 
-for (let i = 0; i < newArr.length;i++){
-    console.log(newArr[i])
-}
+bestColors.forEach((x,i)=> console.log(x))
 
-newArr.forEach((x,i)=>console.log(x))
+//or
+
+/* for(let i = 0; i < bestColors.length;i++){
+    console.log( bestColors[i] )
+  } */
