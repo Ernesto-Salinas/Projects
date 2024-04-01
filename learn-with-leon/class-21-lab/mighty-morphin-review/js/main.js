@@ -46,6 +46,7 @@ minMax(15,34,19)
 // *Conditionals*
 //Create a function that returns heads or tails randomly and as fairly as possible. Call the function.
 
+//Method 1
 function random(){
     ans = Math.random()
     if (ans<0.5){
@@ -55,11 +56,23 @@ function random(){
     }
 }
 
+// Method 2
+const arrowFunction = _ => Math.random() < 0.5 ? 'tails' : 'heads'
+
+
+
 //*Loops*
 //Create a function that takes in a number. Console log the result of heads or tails using the previous function x times where x is the number passed into the function. Call the function.
 function imTired(n1){
     for(let i = 1; i <= n1; i++){
         let ans = random()
+        console.log(ans)
+    }
+}
+
+function imTired2(n1){
+    for(let i = 1; i <= n1; i++){
+        let ans = arrowFunction()
         console.log(ans)
     }
 }
