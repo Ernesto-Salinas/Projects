@@ -1,0 +1,5 @@
+- Build HTML for BBC Website. It doesn't need to look like the image, you just need to do the HTML structure with no CSS.
+- Use MDN
+	https://developer.mozilla.org/en-US/
+- Read Shay Howe: Learn to Code (all 12)
+	https://learn.shayhowe.com/html-css/
