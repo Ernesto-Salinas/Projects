@@ -33,3 +33,27 @@ section {
   right: 20px;
   top: 20px;
 }
+
+h2,
+p {
+  color: #555;
+  font: 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #0087cc;
+}
+a:hover {
+  color: #ff7b29;
+}
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.byline {
+  color: #9799a7;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  margin-bottom: 18px;
+}
+
