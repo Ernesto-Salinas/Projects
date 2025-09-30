@@ -1,9 +1,4 @@
-fruit="apple"
+x=4285
 
-print(fruit)
-print(fruit[1])
-
-distance=''
-time=''
-speed=''
+print(x[1])
 
