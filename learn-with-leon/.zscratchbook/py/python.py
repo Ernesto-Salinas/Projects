@@ -1,4 +1,8 @@
-x=4285
+dict={}
+x='a'
 
-print(x[1])
+dict={x:1}
 
+print(dict)
+
+print(dict.key())
