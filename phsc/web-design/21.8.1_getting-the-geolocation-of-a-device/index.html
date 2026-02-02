@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  	<meta charset="utf-8">
+  	<meta name="description" content="Your description goes here">
+  	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Your Location</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body onload="initLocation();">
+		<div id="locationDiv">Looking Up Location</div>   
+		<script>
+			function initLocation() {
+				var geolocation = navigator.geolocation;
+				if (geolocation) {
+					try {
+						navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+					} catch (err) {
+						document.getElementById('locationDiv').innerHTML = 'Error';
+					}
+				} else {
+				document.getElementById('locationDiv').innerHTML = 'Your browser does not support geolocation.';
+				}
+			} function successCallback(location) {
+				document.getElementById('locationDiv').innerHTML = "<p>Latitude: " + location.coords.latitude + "</p>";
+				document.getElementById('locationDiv').innerHTML += "<p>Longitude: " + location.coords.longitude + "</p>";
+			} function errorCallback() {
+				document.getElementById('locationDiv').innerHTML = "There was an error looking up your position";
+			}
+		</script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

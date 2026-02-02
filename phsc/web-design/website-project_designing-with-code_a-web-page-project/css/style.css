@@ -22,19 +22,90 @@
 /*******************************************/
 
 body {
-
+  font-family: Arial, sans-serif; 
+  background-color: #fdfbee; 
+  margin: 0; 
+  padding: 0; 
+  color: #333;
 }
 
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
+nav {
+  background-color: #120588; 
+  color: white; 
+  padding: 1em;
+  display: flex;
 }
 
-footer {
+.navbar li {
+  position: relative;
+}
 
+.navbar span:hover {
+  background: #444;
+}
+
+/* Dropdown container */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  min-width: 150px;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+nav ul { 
+  list-style-type: none; 
+  padding: 0; 
+}
+
+nav ul li { 
+  display: inline; 
+  margin-right: 15px; 
+}
+
+nav a { 
+color: white; 
+text-decoration: none; 
+} 
+
+main { 
+padding: 1em; 
+} 
+
+h1 {
+  font-size: 2em;
+}
+
+h2 { 
+  font-size: 1.5em; 
+  color: #000000; 
+}
+
+img { 
+  max-width: 100%; 
+  height: auto; 
+  border: 2px solid #ccc; 
+  margin-top: 1em; 
+} 
+
+footer {
+  background-color: #eee; 
+  text-align: center; 
+  padding: 1em; 
+  font-size: 0.9em;
 }
 
 /******************************************

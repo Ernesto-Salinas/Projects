@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+		<script>
+            function validateForm() {
+                var x = document.forms["myForm"]["pass1"].value;
+                if (x == "") {
+                    alert("password field is blank, Please fill");
+                    return false;
+                }
+                else if(x.length<8){
+                    alert("Password must be at least 8 characters long.");
+                    return false;
+                }
+            }
+        </script>
+		<title>Scratch Pad</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            Enter the Password: <input type="password" name="pass1"></br></br>
+            <input type="submit" value="Submit">
+        </form>
+	</body>
+</html>

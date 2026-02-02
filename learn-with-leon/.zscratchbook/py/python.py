@@ -1,8 +1,3 @@
-dict={}
-x='a'
-
-dict={x:1}
-
-print(dict)
-
-print(dict.key())
+print ("Hello World")
+x=5
+print (x)
