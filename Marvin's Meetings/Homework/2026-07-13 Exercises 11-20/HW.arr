@@ -1,4 +1,12 @@
 use context starter2024
+#|Link for exercises:
+https://htdp.org/2026-5-28//Book/part_one.html#%28counter._%28exercise._fun0%29%29
+
+   NOTE: The exercises are not specifically designed for Pyret, so the referenced examples may not be helpful
+
+Documentation:
+   https://pyret.org/docs/latest/ |#
+
 "Exercise 11"
 # Define a function that consumes two numbers, x and y, and that computes the distance of point (x,y) to the origin.
 fun distance(x,y):
@@ -146,14 +154,16 @@ end
 
 string-substring("2026-07-27Name of file", 0, 10)
 string-substring("2026-07-27Name of file", 10, string-length("2026-07-27Name of file"))
-  
-  
-# Enumeration
-# Encoding information where it can be one of many things.
 
-# A TrafficLight is one of:
-# - "red"
-# - "yellow"
-# - "green"
+"Exercise 20"
+# Define the function string-delete, which consumes a string plus a number i and deletes the ith position from str. Assume i is a number between 0 (inclusive) and the length of the given string (exclusive). See exercise 4 for ideas. Can string-delete deal with empty strings?
 
-# Design Recipe
+fun string-delete(str, i):
+  str1 = string-substring(str, 0, i)
+  string-append(str1, string-substring(str, i + 1, string-length(str)))
+where:
+  string-delete("Hello_ my name is John.", 5) is "Hello my name is John."
+  string-delete("I really cant help you.", 12) is "I really can help you."
+end
+  
+string-delete("Hello_ my name is John.", 5)
