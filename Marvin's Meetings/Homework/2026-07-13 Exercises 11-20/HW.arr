@@ -131,6 +131,8 @@ end
 "Exercise 18"
 # Define the function string-join, which consumes two strings and appends them with "_" in between. See exercise 2 for ideas.
 
+# a + b ---> string-append(a, b)
+# str1 + "_" + str2
 fun string-join(str1, str2):
   part1 = string-append(str1, "_")
   ans = string-append(part1, str2)
@@ -167,3 +169,10 @@ where:
 end
   
 string-delete("Hello_ my name is John.", 5)
+
+# FEEDBACK:
+# 1. You may use functions you defined previously. E.g. string-join in string-insert.
+# 2. For examples and tests, make the simplest possible example, and gradually work your way 
+#    up in complexity.
+#    - string-insert, can actually take in an empty string.
+#    - string-delete cannot.

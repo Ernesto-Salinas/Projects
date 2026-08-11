@@ -31,9 +31,17 @@ def row_sum_odd_numbers(n):
 
 # Tests
 
+"""
 row_sum_odd_numbers(1)
 row_sum_odd_numbers(2)
 row_sum_odd_numbers(13)
 row_sum_odd_numbers(19)
 row_sum_odd_numbers(41)
+"""
+
+import pytest
+
+def test_row_sum_odd_numbers():
+    assert test_row_sum_odd_numbers(2) == 8
+    assert test_row_sum_odd_numbers(3) == 27
     

@@ -37,7 +37,7 @@ print(descending_order(0))
 print(descending_order(15))
 print(descending_order(123456789))
 
-#Attempt 2 after realizing there is a sorting method *facepalm*"
+# Attempt 2 after realizing there is a sorting method *facepalm*"
 
 def descending_order_Att2(num):
     list1 = sorted(str(num))
