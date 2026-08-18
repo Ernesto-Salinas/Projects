@@ -10,3 +10,6 @@ function maps(x){
         result.push(x[i]*2)
     }return(result)
 }
+
+// Tests
+console.log(maps([1,2,3]))
