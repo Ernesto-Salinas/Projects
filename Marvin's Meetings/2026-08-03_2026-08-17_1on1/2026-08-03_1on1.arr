@@ -291,12 +291,12 @@ draw-door-operation("closed")
 draw-door-operation("open")
 
 
-# Door Number Number KeyEvent -> Door
-fun on-mouse-door(door, x, y, key-event):
+# Position Number Number KeyEvent -> Door
+fun on-mouse-door(position, x, y, key-event):
   if key-event == "button-down":
-    activate(door)
+    activate(position)
   else:
-    door
+    position
   end
 end
 
