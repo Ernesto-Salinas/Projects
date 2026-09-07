@@ -22,8 +22,8 @@ RS_LAUNCHED = "launched"
 
 # RocketState -> ?
 fun rocket-state-template(rs):
-  if rs == RS_LAUNCHED: ...
-  else if (rs >= RS_0) and (rs <= RS_3): ...
+  if is-number(rs) and (RS_0 <= rs) and (rs <= RS_3): ...
+  else if rs == RS_LAUNCHED: ...
   end
 end
 
@@ -41,52 +41,67 @@ end
 # actual rocket and fire image. 
 
 fun count-down(rs):
-  if rs == RS_3: RS_2
+  #|if rs == RS_3: RS_2
   else if rs == RS_2: RS_1
-  else if rs == RS_1: RS_0
-  else if rs == RS_0: RS_LAUNCHED
+  else if rs == RS_1: RS_0|#
+  if is-number(rs) and (rs >= RS_1) and (rs <= RS_3):
+    rs - 1
+  else if (rs == RS_0) or (rs == RS_LAUNCHED): RS_LAUNCHED
   end
 where:
   count-down(RS_3) is RS_2
   count-down(RS_2) is RS_1
   count-down(RS_1) is RS_0
   count-down(RS_0) is RS_LAUNCHED
+  count-down(RS_LAUNCHED) is RS_LAUNCHED
 end
 
 
 
 UROCKET = image-file("./images/UnlaunchedRocket.png")
 LROCKET = image-file("./images/LaunchedRocket.png")
-CD3 = text-font("3", 128, "red", "Gill Sans", 
+
+#To define the parameters for the countdown image.
+#Number & ImageColor -> Image
+fun draw-cd-image(countdown, color):
+  text-font(num-to-string(countdown), 128, color, "Gill Sans", 
         "decorative", "normal", "bold", false)
-CD2 = text-font("2", 128, "orange", "Gill Sans", 
-        "decorative", "normal", "bold", false)
-CD1 = text-font("1", 128, "yellow", "Gill Sans", 
-        "decorative", "normal", "bold", false)
-CD0 = text-font("0", 128, "green", "Gill Sans", 
-        "decorative", "normal", "bold", false)
+end
+
+CD3 = draw-cd-image(3, "red")
+CD2 = draw-cd-image(2, "orange")
+CD1 = draw-cd-image(1, "yellow")
+CD0 = draw-cd-image(0, "green")
 
 #Purpose: To take in the RocketState and generate an Image.
 #signature: RocketState -> Image of Rocket
-fun draw-rocket(rs):
-  if rs == RS_LAUNCHED:
-    LROCKET
-  else if (rs >= RS_0) and (rs <= RS_3):
+#|fun draw-rocket(rs):
+  if is-number(rs) and (rs >= RS_0) and (rs <= RS_3):
     UROCKET
+  else if rs == RS_LAUNCHED:
+    LROCKET    
   end
 where:
   draw-rocket(RS_0) is UROCKET
   draw-rocket(RS_LAUNCHED) is LROCKET
+   end|#
+
+#To set the color based on the RocketState
+#RocketState -> Color
+fun countdown-to-color(rs):
+  if rs == RS_3: "red"
+  else if rs == RS_2: "orange"
+  else if rs == RS_1: "yellow"
+  else if rs == RS_0: "green"
+  end
 end
+  
 
 #Take in the RocketState, and generate the CountDown
 #RocketState -> CountDown
 fun draw-count-down(rs):
-  if rs == RS_3: CD3
-  else if rs == RS_2: CD2
-  else if rs == RS_1: CD1
-  else if rs == RS_0: CD0
-  end
+  color = countdown-to-color(rs)
+  draw-cd-image(rs, color)
 where:
   draw-count-down(RS_3) is CD3
   draw-count-down(RS_2) is CD2
@@ -98,17 +113,18 @@ end
 # RocketState -> Image of Rocket + CountDown
 fun draw-rocket-count-down(rs):
   if rs == RS_LAUNCHED:
-    draw-rocket(rs)
+    LROCKET
   else if (rs >= RS_0) and (rs <= RS_3):
     overlay-align("middle", "top", 
       draw-count-down(rs), 
-      draw-rocket(rs))
+      UROCKET)
   end
 where:
   draw-rocket-count-down(RS_3) is overlay-align(
     "middle", "top", 
     draw-count-down(RS_3), 
-    draw-rocket(RS_3))
+    UROCKET)
+  draw-rocket-count-down(RS_LAUNCHED) is LROCKET
 end
 
 
@@ -130,7 +146,7 @@ animate = reactor:
   to-draw: draw-rocket-count-down
 end
 
-#interact(animate)
+interact(animate)
 
 # ASIDE: Wishlisting. Iterative refinement.
 # How do we go from nothing to something? 
