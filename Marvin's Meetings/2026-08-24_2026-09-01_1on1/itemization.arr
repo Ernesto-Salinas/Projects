@@ -41,9 +41,6 @@ end
 # actual rocket and fire image. 
 
 fun count-down(rs):
-  #|if rs == RS_3: RS_2
-  else if rs == RS_2: RS_1
-  else if rs == RS_1: RS_0|#
   if is-number(rs) and (rs >= RS_1) and (rs <= RS_3):
     rs - 1
   else if (rs == RS_0) or (rs == RS_LAUNCHED): RS_LAUNCHED
@@ -73,18 +70,6 @@ CD2 = draw-cd-image(2, "orange")
 CD1 = draw-cd-image(1, "yellow")
 CD0 = draw-cd-image(0, "green")
 
-#Purpose: To take in the RocketState and generate an Image.
-#signature: RocketState -> Image of Rocket
-#|fun draw-rocket(rs):
-  if is-number(rs) and (rs >= RS_0) and (rs <= RS_3):
-    UROCKET
-  else if rs == RS_LAUNCHED:
-    LROCKET    
-  end
-where:
-  draw-rocket(RS_0) is UROCKET
-  draw-rocket(RS_LAUNCHED) is LROCKET
-   end|#
 
 #To set the color based on the RocketState
 #RocketState -> Color
